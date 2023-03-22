@@ -3,6 +3,9 @@ from towhee import pipe, ops
 import numpy as np
 from towhee.datacollection import DataCollection
 
+### THIS DOES NOT WORK!
+
+
 insert_pipe = (
     pipe.input('id', 'content')
         .map('content', 'vec', ops.text_embedding.dpr(model_name='facebook/dpr-ctx_encoder-single-nq-base'))
@@ -15,6 +18,6 @@ def load_data():
     with open("data/content.txt") as fd:
         rd = csv.reader(fd, delimiter="\t")
         for row in rd:
-            print(row)
+            insert_pipe(row)
 
 load_data()

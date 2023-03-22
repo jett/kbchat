@@ -7,7 +7,7 @@ def create_milvus_collection(collection_name, dim):
         utility.drop_collection(collection_name)
     
     fields = [
-        FieldSchema(name='id', dtype=DataType.VARCHAR, description='ids', max_length=500, is_primary=True, auto_id=False),
+        FieldSchema(name='id', dtype=DataType.INT64, description='ids', max_length=500, is_primary=True, auto_id=False),
         FieldSchema(name='embedding', dtype=DataType.FLOAT_VECTOR, description='embedding vectors', dim=dim)
     ]
     schema = CollectionSchema(fields=fields, description='QC Q&A')
