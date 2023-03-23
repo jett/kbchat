@@ -39,8 +39,6 @@ with open("data/content.txt") as fd:
             print(len(embedding))
             embeddings.append(embedding)
 
-print(ids)
-
 entities = [
     [int(id) for id in ids],
     [embedding.tolist() for embedding in embeddings]
