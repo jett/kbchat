@@ -24,7 +24,9 @@ def load_data():
         next(rd, None)
         for row in rd:
             ids.append(row[0])
-            embeddings.append(model.encode(row[1]))
+            embedding = model.encode(row[1])
+            print(len(embedding))
+            embeddings.append(embedding)
 
     print(ids)
 
@@ -34,7 +36,7 @@ def load_data():
     ]
 
     print(entities)
-    status, myids = client.insert(collection_name='qc_answer', entities=entities)
+    # status, myids = client.insert(collection_name='qc_answer', entities=entities)
 
 def query_data():
     pass

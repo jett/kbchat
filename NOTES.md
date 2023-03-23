@@ -10,3 +10,9 @@ please do the following if you haven not already done so:
 
 # need tbb2
 sudo apt-get install libtbb2
+
+
+
+# Milvus loads the raw data or index into main memory
+https://github.com/milvus-io/milvus/discussions/16484
+
