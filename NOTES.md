@@ -15,4 +15,3 @@ sudo apt-get install libtbb2
 
 # Milvus loads the raw data or index into main memory
 https://github.com/milvus-io/milvus/discussions/16484
-
