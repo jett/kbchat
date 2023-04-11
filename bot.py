@@ -3,9 +3,8 @@ import telebot
 
 from loader import construct_prompt
 
-# https://www.freecodecamp.org/news/how-to-create-a-telegram-bot-using-python/
-# BOT_TOKEN = os.environ.get('BOT_TOKEN')
-bot = telebot.TeleBot('6237468626:AAEWh643EpuxAmcEBBCDzlAJZled4x_4L3U')
+BOT_TOKEN = os.environ.get('BOT_TOKEN')
+bot = telebot.TeleBot(BOT_TOKEN)
 
 @bot.message_handler(commands=['start', 'hello'])
 def send_welcome(message):
